@@ -1,0 +1,223 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+/* ========== BASE ========== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: #eef1f5;
+  color: #1f2937;
+}
+
+/* ========== LOGIN ========== */
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* کارت لاگین (مربع مشخص) */
+.login-box {
+  width: 420px;
+  background: #f8fafc;              /* 👈 رنگ باکس */
+  padding: 32px;
+  border-radius: 14px;
+  border: 1px solid #d6dae1;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.login-box h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 22px;
+}
+
+/* input داخل باکس */
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 14px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid #cfd3d8;
+  background: #ffffff;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+/* دکمه آبی */
+.login-box button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  border: none;
+  background: #2563eb;              /* 👈 آبی */
+  color: #ffffff;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.login-box button:hover {
+  background: #1e40af;
+}
+
+.error {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #dc2626;
+}
+
+/* ========== PRODUCTS ========== */
+.products {
+  padding: 30px 360px 30px 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* 👈 کارت بزرگ‌تر */
+  gap: 28px;
+}
+
+/* کارت محصول */
+.product-card {
+  background: #ffffff;
+  border: 1px solid #d6dae1;
+  border-radius: 12px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* عکس بزرگ‌تر */
+.product-card img {
+  width: 100%;
+  height: 230px;                    /* 👈 بزرگ‌تر */
+  object-fit: contain;
+  background: #f3f4f6;
+  border-radius: 10px;
+  margin-bottom: 14px;
+}
+
+/* عنوان */
+.product-card h4 {
+  font-size: 16px;
+  margin: 6px 0 10px;
+  line-height: 1.4;
+  height: 44px;
+  overflow: hidden;
+}
+
+/* قیمت */
+.product-card p {
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 14px;
+}
+
+/* دکمه آبی */
+.product-card button {
+  margin-top: auto;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: #2563eb;              /* 👈 آبی */
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.product-card button:hover {
+  background: #1e40af;
+}
+
+/* ========== CART ========== */
+.cart {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 340px;
+  height: 100vh;
+  background: #ffffff;
+  border-left: 1px solid #d6dae1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart h3 {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+/* آیتم سبد */
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 8px;
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+/* توتال */
+.cart-total {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid #d6dae1;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+
