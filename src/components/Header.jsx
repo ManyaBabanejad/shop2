@@ -1,11 +1,11 @@
-import React from "react";
-
-function Header({ user, setUser }) {
+function Header({ user, setUser, cartCount }) {
   return (
     <header className="header">
-      <h1>فروشگاه آنلاین</h1>
+      <h2>🛍 فروشگاه آنلاین</h2>
+
       <div>
-        <span>{user} به فروشگاه خوش آمدی.</span>
+       
+        <span>{user} خوش آمدی</span>
         <button onClick={() => setUser(null)}>خروج</button>
       </div>
     </header>

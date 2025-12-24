@@ -1,31 +1,31 @@
 import { useEffect, useState } from "react";
-import ProductCard from "./components/ProductCard";
-import "./App.css"
+import ProductCard from "../components/ProductCard";
 
-function Products({ cart, setCart , setIsCartOpen}) {
+function Products({ cart, setCart, setIsCartOpen }) {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
       .then(res => res.json())
-      .then(data => setProducts(data));
+      .then(setProducts);
   }, []);
 
   const addToCart = (product) => {
     const exists = cart.find(item => item.id === product.id);
+
     if (exists) {
       setCart(
         cart.map(item =>
           item.id === product.id
-            ? { ...item, quantity: (item.quantity || 1) + 1 }
+            ? { ...item, quantity: item.quantity + 1 }
             : item
         )
       );
     } else {
       setCart([...cart, { ...product, quantity: 1 }]);
     }
-    setIsCartOpen(true); 
-    setTimeout(() => setIsCartOpen(false), 2000); 
+
+    setIsCartOpen(true);
   };
 
   return (
